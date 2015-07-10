@@ -95,6 +95,14 @@ window.format_iso_datetime = function (iso8601DateStr) {
         }, settings))
     }
 
+    $.deleteReq = function (url, settings) {
+        if (typeof settings == 'undefined') settings = {};
+        return $.ajax(url, $.extend({
+            contentType : 'application/json; charset=UTF-8',
+            type: "DELETE"
+        }, settings))
+    }
+
     $.failNotify = function(xhr) {
         if (typeof xhr.responseJSON == 'undefined') {
             xhr.responseJSON = {status : 500, title : 'Unknown Server Error', detail : 'Unknown Server response received'}

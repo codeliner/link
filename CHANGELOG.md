@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+- New jQuery plugin to send a DELETE request: $.deleteReq
+### Changed
+- Table `link_pm_read_task` was modified:
+  - columns workflow_id, process_id and message_handler_id can now be null
+  - new column activated defaults to 1
 
 ## [0.4.0] - 2015-05-12
 ### Added
